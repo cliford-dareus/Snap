@@ -1,0 +1,123 @@
+:root{
+    --clr--light: hsl(0, 0%, 98%);
+    --clr--grey: hsl(0, 0%, 41%);
+    --clr--dark: hsl(0, 0%, 8%);
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   font-family: 'Poppins', sans-serif;
+   background-color: var(--clr--light);
+   color: var(--clr--dark);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* ================================================================= */
+.navbar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.navbar_left{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav_list{
+    position: absolute;
+    background-color: var(--clr--grey);
+    top: 0;
+    right: 0;
+    /* transform: translateX(100%); */
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 5em 1em;
+}
+
+.feature_dropdown_content{
+    display: none
+}
+
+.close_nav_btn{
+    position: absolute;
+    top: .1em;
+    right: .1em;
+    font-size: 3rem;
+}
+
+.navbar_right{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.nav_item a:hover{
+    display: block;
+    background-color: red;
+    z-index: 22;
+}
+
+.nav_link_hovered2{
+    display: none;
+}
+
+
+.company_dropdown_content{
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .nav_list{
+        position: initial;
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .menu_toggle{
+        display: none
+    }
+
+    .nav_item a{
+        display: flex
+    }
+
+    .navbar_right{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1em;
+        display: flex;
+        gap: 1em;
+    }
+}
